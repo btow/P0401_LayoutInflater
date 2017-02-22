@@ -23,19 +23,17 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater layoutInflater = getLayoutInflater();
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linLayout);
-        View view1 = layoutInflater.inflate(R.layout.text, linearLayout, false);
+        View view1 = layoutInflater.inflate(R.layout.text, linearLayout, true);
         ViewGroup.LayoutParams layoutParams1 = view1.getLayoutParams();
 
         Log.d(LOG_TAG, "Class of view: " + view1.getClass().toString());
-        Log.d(LOG_TAG, "LayoutParams of view is null: " + (layoutParams1 == null));
-        Log.d(LOG_TAG, "Text of view: " + ((TextView) view1).getText());
+        Log.d(LOG_TAG, "Class of LayoutParams of view: " + layoutParams1.getClass().toString());
 
         RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);
-        View view2 = layoutInflater.inflate(R.layout.text, relativeLayout, false);
+        View view2 = layoutInflater.inflate(R.layout.text, relativeLayout, true);
         ViewGroup.LayoutParams layoutParams2 = view2.getLayoutParams();
 
         Log.d(LOG_TAG, "Class of view: " + view2.getClass().toString());
-        Log.d(LOG_TAG, "LayoutParams of view is null: " + (layoutParams2 == null));
-        Log.d(LOG_TAG, "Text of view: " + ((TextView) view2).getText());
+        Log.d(LOG_TAG, "Class of LayoutParams of view: " + layoutParams2.getClass().toString());
     }
 }
